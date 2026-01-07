@@ -11,14 +11,14 @@ function WhyChoose() {
 
 
                             <div className='WCCard_image'>
-                                <img src='src/assets/images/trainers1.jpg' ></img>
+                                <img src='/assets/Images/trainers1.jpg' alt='logo'></img>
                             </div>
                             <span> Expert Trainers</span>
                         </div>
                         <div class="WCsecond-content">
                             <div className='WCCard_second'>
                                 <div className='WCCard_image_second'>
-                                    <img src='src/assets/images/trainers1.jpg' ></img>
+                                    <img src='/assets/Images/trainers1.jpg' alt='logo'></img>
                                 </div>
                             </div>
                             <h1> Expert Trainers</h1>
@@ -29,7 +29,7 @@ function WhyChoose() {
                         <div class="WCfirst-content">
 
                             <div className='WCCard_image'>
-                                <img src='src/assets/images/flexibleTraining.jpg' ></img>
+                                <img src='/assets/Images/flexibleTraining.jpg' alt='logo'></img>
                             </div>
                             <span>Flexiable Timing</span>
                         </div>
@@ -41,14 +41,14 @@ function WhyChoose() {
                         <div class="WCfirst-content">
 
                             <div className='WCCard_image'>
-                                <img src='src/assets/images/placement.jpg' ></img>
+                                <img src='/assets/Images/placement.jpg' alt='logo'></img>
                             </div>
                             <span>Placement Assisance</span>
                         </div>
                         <div class="WCsecond-content">
                             <div className='WCCard_second'>
                                 <div className='WCCard_image_second'>
-                                    <img src='src/assets/images/placement.jpg' ></img>
+                                    <img src='/assets/Images/placement.jpg' alt='logo'></img>
                                 </div>
                             </div>
                             <h1>Placement Support</h1>
@@ -59,7 +59,7 @@ function WhyChoose() {
                         <div class="WCfirst-content">
 
                             <div className='WCCard_image'>
-                                <img src='src/assets/images/liveproject.jpg' ></img>
+                                <img src='/assets/Images/liveproject.jpg' alt='logo'></img>
                             </div>
                             <span>Workin Live Project</span>
                         </div>
@@ -72,7 +72,7 @@ function WhyChoose() {
                         <div class="WCfirst-content">
 
                             <div className='WCCard_image'>
-                                <img src='src/assets/images/cost.jpg' ></img>
+                                <img src='/assets/Images/cost.jpg' alt='logo'></img>
                             </div>
                             <span>Cost</span>   
                         </div>
@@ -85,7 +85,7 @@ function WhyChoose() {
                     <div class="WCcard">
                         <div class="WCfirst-content">
                             <div className='WCCard_image'>
-                                <img src='src/assets/images/cost.jpg' ></img>
+                                <img src='/assets/Images/placement2.jpg' alt='logo'></img>
                             </div>
                             <span>Lab Support</span>
                         </div>

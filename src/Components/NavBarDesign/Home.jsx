@@ -14,14 +14,14 @@ function Home() {
           <div className="mainHeader">
             <h1>Most-Leading and Trusted Training Institute</h1>
             <span id="banner_text">Get trained, Work on live projects and get hired.</span>
-            <div style={{width:"100%",marginBottom:"20px", marginTop: "20px"}}>
+            <div style={{ width: "100%", marginBottom: "20px", marginTop: "20px" }}>
               <button className="Homebutton" >
                 Explore Courses
               </button>
             </div>
           </div>
           <div className="bannerImg">
-            <img src="src/assets/banner2.webp" className="bannerImg_size" alt="banner" />
+            <img src="/assets/banner2.webp" className="bannerImg_size" alt="banner" />
           </div>
 
         </div>

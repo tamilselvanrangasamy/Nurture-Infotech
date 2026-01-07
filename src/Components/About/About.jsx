@@ -45,7 +45,7 @@ const About = () => {
           <p style={{ padding: "50px 10px" }}>Elevate your life with Nurture Infotech! Our comprehensive programs in Python, Digital Marketing, and programming offer transformative learning experiences. Master essential skills, unlock career opportunities, and enrich your future. Join us on a journey of growth and success through the world of IT and digital excellence.</p>
         </section>
         <section className="about_main_img">
-          <img src="src/assets/Images/About/businessman.png" alt="businessman"></img>
+          <img src="/assets/Images/About/businessman.png" alt="businessman"></img>
         </section>
       </section>
       <section className="Blank_banner">

@@ -49,7 +49,7 @@ function Enquiryform() {
       <div className="Enquiry">
         <div className="Enquiry_head">
           <div className="enquiry_bg_img">
-            <img src="src/assets/Images/Enquire/career.webp" id="enquiry_bg_img" alt="wrong" />
+            <img src="/assets/Images/Enquire/career.webp" id="enquiry_bg_img" alt="wrong" />
           </div>
           <div className="enquiry_bg_text">
             <h1 id="enquiry_bg_text">The <span id="bg_text">beautiful</span> thing about learning is that nobody <span id="bg_text">can take it away</span> from you</h1>
@@ -91,7 +91,7 @@ function Enquiryform() {
                 <div className="logoanimate">
                   <div className="enquiry_logo">
                     <div>
-                      <img src="src/assets/Images/Enquire/logo.png" id="formlogo1" alt="wrong" />
+                      <img src="/assets/Images/Enquire/logo.png" id="formlogo1" alt="wrong" />
                     </div>
                     <h1 id="formHead1">Let's Connect with us!</h1>
                   </div>

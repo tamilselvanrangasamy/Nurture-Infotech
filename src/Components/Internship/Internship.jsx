@@ -3,10 +3,10 @@ import './Internship.css'
 import Banner from '../Banner/Banner';
 import Testimonials from './Testimonials';
 // import bgicon from './assets/Images/Internship images/data-science.jpg'
-const bgicon = "src/assets/Images/Internship images/course_shape02.png"
-const bgicon1 = "src/assets/Images/Internship images/blog_shape01.png"
-const bgicon2 = "src/assets/Images/Internship images/categories_shape02-1.png"
-const bgicon3 = "src/assets/Images/Internship images/categories_shape01.png"
+const bgicon = "/assets/Images/Internship images/course_shape02.png"
+const bgicon1 = "/assets/Images/Internship images/blog_shape01.png"
+const bgicon2 = "/assets/Images/Internship images/categories_shape02-1.png"
+const bgicon3 = "/assets/Images/Internship images/categories_shape01.png"
 
 const Internship = () => {
   const join = [{
@@ -30,56 +30,56 @@ const Internship = () => {
     {
       id: 1,
       title: "Data Science",
-      img: "src/assets/Images/Internship images/data-science.jpg",
+      img: "/assets/Images/Internship images/data-science.jpg",
       text: "Data science extracts insights from data, enabling informed decisions and predictions",
       tag: "Trending"
     },
     {
       id: 2,
       title: "Data Analytics",
-      img: "src/assets/Images/Internship images/data-analytics.jpg",
+      img: "/assets/Images/Internship images/data-analytics.jpg",
       text: "Data analytics transforms data into insights for better decision-making",
       tag: "Trending"
     },
     {
       id: 3,
       title: "Artificial Intelligence",
-      img: "src/assets/Images/Internship images/AI.jpg",
+      img: "/assets/Images/Internship images/AI.jpg",
       text: "Artificial Intelligence enables machines to learn, reason, and solve problems",
       tag: "Trending"
     },
     {
       id: 4,
       title: "Full Stack Development",
-      img: "src/assets/Images/Internship images/MERN-stack.jpg",
+      img: "/assets/Images/Internship images/MERN-stack.jpg",
       text: "Full Stack Development builds both front-end and back-end applications",
       tag: "Trending"
     },
     {
       id: 5,
       title: "Python",
-      img: "src/assets/Images/Internship images/python.jpg",
+      img: "/assets/Images/Internship images/python.jpg",
       text: "Python is a versatile language for web development and data analysis",
       tag: ""
     },
     {
       id: 6,
       title: "Java",
-      img: "src/assets/Images/Internship images/java.jpg",
+      img: "/assets/Images/Internship images/java.jpg",
       text: "Java is a object-oriented language for building scalable applications and systems",
       tag: ""
     },
     {
       id: 7,
       title: "Web Development",
-      img: "src/assets/Images/Internship images/webdev.jpg",
+      img: "/assets/Images/Internship images/webdev.jpg",
       text: "Web development creates interactive websites and applications for the internet",
       tag: ""
     },
     {
       id: 8,
       title: "Software Testing",
-      img: "src/assets/Images/Internship images/software-testing.jpg",
+      img: "/assets/Images/Internship images/software-testing.jpg",
       text: "Software testing ensures quality by identifying and fixing bugs in applications",
       tag: ""
 
@@ -87,7 +87,7 @@ const Internship = () => {
     {
       id: 9,
       title: "UI / UX Design",
-      img: "src/assets/Images/Internship images/UIUX.jpg",
+      img: "/assets/Images/Internship images/UIUX.jpg",
       text: "UI/UX design focuses on creating user-friendly and visually appealing interfaces",
       tag: "Trending"
 
@@ -95,21 +95,21 @@ const Internship = () => {
     {
       id: 10,
       title: "CCNA",
-      img: "src/assets/Images/Internship images/CCNA.jpg",
+      img: "/assets/Images/Internship images/CCNA.jpg",
       text: "CCNA certifies networking skills for configuring and managing Cisco networks",
       tag: "Trending"
     },
     {
       id: 11,
       title: "Tally",
-      img: "src/assets/Images/Internship images/Tally.jpg",
+      img: "/assets/Images/Internship images/Tally.jpg",
       text: "Tally is an accounting software used for financial management and bookkeeping",
       tag: "Trending"
     },
     {
       id: 12,
       title: "Digital Marketing",
-      img: "src/assets/Images/Internship images/digital-marketing.jpg",
+      img: "/assets/Images/Internship images/digital-marketing.jpg",
       text: "Digital marketing uses online platforms to promote products and engage audiences.",
       tag: "Trending"
     }]
@@ -199,7 +199,7 @@ const Internship = () => {
             <div className="neoMain">
               <div className="neoimg_bg">
                 <div className="neoIcon">
-                  <img src="src/assets/Images/Enquire/logo.png" id="formlogo" alt='logo' />
+                  <img src="/assets/Images/Enquire/logo.png" id="formlogo" alt='logo' />
                 </div>
               </div>
               <div className="neoHead">

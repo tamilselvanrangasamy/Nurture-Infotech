@@ -115,7 +115,6 @@ const Internship = () => {
     }]
   const [Courses, setCourses] = useState([]);
   useEffect(() => {
-    console.log(1)
     setCourses(courseinfo)
   }, [])
   const Form = useRef(null);
@@ -127,11 +126,12 @@ const Internship = () => {
   return (
     <div className='internship-container'>
 
-      {/* Internship Text */}
       <div className='bg_icon'>
-        <img src={bgicon} alt="" className="bg_icon_1" />
-        <img src={bgicon1} alt="" className="bg_icon_2" />
+        <img src={bgicon} alt="icon" className="bg_icon_1" />
+        <img src={bgicon1} alt="icon" className="bg_icon_2" />
       </div>
+      {/* Internship Text */}
+
       <div className='internship-content'>
         <div id='itext'>
           <h1 id='ihead' className='title'>Discover your <span id='intern-text'>passion</span>,
@@ -154,7 +154,7 @@ const Internship = () => {
       {/* Trending Technologies */}
       <div className="internship-courses">
         <div className='intern_bg_icon'>
-          <img src={bgicon2} alt="" />
+          <img src={bgicon2} alt="icon" />
         </div>
         <div className="trending" >
           {
@@ -172,7 +172,7 @@ const Internship = () => {
                   <div className="card-body">
                     <h2 className="card-title">{course.title}</h2>
                     <p className='card-text'>{course.text}</p>
-                    <button class="card-button" onClick={toForm}>Explore</button>
+                    <button className="card-button" onClick={toForm}>Explore</button>
                   </div>
                 </div>
               )
@@ -252,17 +252,19 @@ const Internship = () => {
               <h1 id="form_head">
                 Who Can Apply for Our Internship?
               </h1>
-              {join.map((e) => (
-                <div className="form-con" key={e.id}>
-                  <div className="form-con-btn">
-                    <button id="form-one">{e.id}</button>
+              <div className='intern_text'>
+                {join.map((e) => (
+                  <div className="intern-form-con" key={e.id}>
+                    <div className="intern-circle">
+                      <button id="form-one">{e.id}</button>
+                    </div>
+                    <div className="intern-content">
+                      <h3>{e.title}</h3>
+                      <p>{e.desc}</p>
+                    </div>
                   </div>
-                  <div className="form-con-content">
-                    <h3>{e.title}</h3>
-                    <p>{e.desc}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

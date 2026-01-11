@@ -104,38 +104,44 @@ function Enquiryform() {
                 </div>
                 <form autoComplete="on" className="form-sub-content">
                   <div>
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Enter your name"
-                      required
-                      id="form-name"
-                      spellCheck="false"
-                      value={name}
-                      onChange={(e) => {
-                        setName(e.target.value);
-                      }}
-                    />{" "}
+                    <label>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                        id="form-name"
+                        spellCheck="false"
+                        value={name}
+                        onChange={(e) => {
+                          setName(e.target.value);
+                        }}
+                      />
+                    </label>
                     <br />
-                    <input
-                      type="number"
-                      name="number"
-                      placeholder="Enter your Mobile Number"
-                      id="form-num"
-                      value={mobile}
-                      onChange={(e) => setMobile(e.target.value)}
-                      required
-                    />
+                    <label>
+                      <input
+                        type="number"
+                        name="number"
+                        placeholder="Enter your Mobile Number"
+                        id="form-num"
+                        value={mobile}
+                        onChange={(e) => setMobile(e.target.value)}
+                        required
+                      />
+                    </label>
                     <br />
-                    <input
-                      type="email"
-                      name="mail"
-                      placeholder="Enter your E-mail"
-                      id="form-mail"
-                      value={mail}
-                      onChange={(e) => setMail(e.target.value)}
-                      required
-                    />{" "}
+                    <label>
+                      <input
+                        type="email"
+                        name="mail"
+                        placeholder="Enter your E-mail"
+                        id="form-mail"
+                        value={mail}
+                        onChange={(e) => setMail(e.target.value)}
+                        required
+                      />
+                    </label>
                     <br />
                   </div>
                   <br />
@@ -143,13 +149,12 @@ function Enquiryform() {
                     <div className="course-select">
                       <select id="course-select">
                         <option hidden>Qualification</option>
-                        {/* <option>PG</option>
+                        <option>PG</option>
                         <option>UG</option>
                         <option>Diploma</option>
-                        <option>School</option> */}
-                        {['PG', '']}
+                        <option>School</option>
                       </select>
-                    </div>{" "}
+                    </div>
                     <br />
                     <div className="course-select">
                       <select id="course-select">
@@ -162,14 +167,17 @@ function Enquiryform() {
                   </div>
                   <div className="radiolg">
                     <div id="form-radio">
-                      {" "}
                       <span>Mode of Training : </span>
                       <div id="form-radio-btn">
                         <span>
-                          <input type="radio" name="mode" value="online" />  Online
+                          <label>
+                            <input type="radio" name="mode" value="online" />  Online
+                          </label>
                         </span>
                         <span>
-                          <input type="radio" name="mode" value="offline" /> Offline
+                          <label>
+                            <input type="radio" name="mode" value="offline" /> Offline
+                          </label>
                         </span>
                       </div>
                     </div>

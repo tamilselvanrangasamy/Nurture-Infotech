@@ -1,12 +1,13 @@
-import { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect, Suspense } from 'react'
 import './Internship.css'
 import Banner from '../Banner/Banner';
-import Testimonials from './Testimonials';
+// import Testimonials from './Testimonials';
 // import bgicon from './assets/Images/Internship images/data-science.jpg'
 const bgicon = "/assets/Images/Internship images/course_shape02.png"
 const bgicon1 = "/assets/Images/Internship images/blog_shape01.png"
 const bgicon2 = "/assets/Images/Internship images/categories_shape02-1.png"
 const bgicon3 = "/assets/Images/Internship images/categories_shape01.png"
+const Testimonials = React.lazy(() => import('./Testimonials'));
 
 const Internship = () => {
   const join = [{
@@ -30,56 +31,56 @@ const Internship = () => {
     {
       id: 1,
       title: "Data Science",
-      img: "/assets/Images/Internship images/data-science.jpg",
+      img: "/assets/Images/Internship images/data-science.webp",
       text: "Data science extracts insights from data, enabling informed decisions and predictions",
       tag: "Trending"
     },
     {
       id: 2,
       title: "Data Analytics",
-      img: "/assets/Images/Internship images/data-analytics.jpg",
+      img: "/assets/Images/Internship images/data-analytics.webp",
       text: "Data analytics transforms data into insights for better decision-making",
       tag: "Trending"
     },
     {
       id: 3,
       title: "Artificial Intelligence",
-      img: "/assets/Images/Internship images/AI.jpg",
+      img: "/assets/Images/Internship images/AI.webp",
       text: "Artificial Intelligence enables machines to learn, reason, and solve problems",
       tag: "Trending"
     },
     {
       id: 4,
       title: "Full Stack Development",
-      img: "/assets/Images/Internship images/MERN-stack.jpg",
+      img: "/assets/Images/Internship images/MERN-stack.webp",
       text: "Full Stack Development builds both front-end and back-end applications",
       tag: "Trending"
     },
     {
       id: 5,
       title: "Python",
-      img: "/assets/Images/Internship images/python.jpg",
+      img: "/assets/Images/Internship images/python.webp",
       text: "Python is a versatile language for web development and data analysis",
       tag: ""
     },
     {
       id: 6,
       title: "Java",
-      img: "/assets/Images/Internship images/java.jpg",
+      img: "/assets/Images/Internship images/java.webp",
       text: "Java is a object-oriented language for building scalable applications and systems",
       tag: ""
     },
     {
       id: 7,
       title: "Web Development",
-      img: "/assets/Images/Internship images/webdev.jpg",
+      img: "/assets/Images/Internship images/webdev.webp",
       text: "Web development creates interactive websites and applications for the internet",
       tag: ""
     },
     {
       id: 8,
       title: "Software Testing",
-      img: "/assets/Images/Internship images/software-testing.jpg",
+      img: "/assets/Images/Internship images/software-testing.webp",
       text: "Software testing ensures quality by identifying and fixing bugs in applications",
       tag: ""
 
@@ -87,7 +88,7 @@ const Internship = () => {
     {
       id: 9,
       title: "UI / UX Design",
-      img: "/assets/Images/Internship images/UIUX.jpg",
+      img: "/assets/Images/Internship images/UIUX.webp",
       text: "UI/UX design focuses on creating user-friendly and visually appealing interfaces",
       tag: "Trending"
 
@@ -95,33 +96,55 @@ const Internship = () => {
     {
       id: 10,
       title: "CCNA",
-      img: "/assets/Images/Internship images/CCNA.jpg",
+      img: "/assets/Images/Internship images/CCNA.webp",
       text: "CCNA certifies networking skills for configuring and managing Cisco networks",
       tag: "Trending"
     },
     {
       id: 11,
       title: "Tally",
-      img: "/assets/Images/Internship images/Tally.jpg",
+      img: "/assets/Images/Internship images/Tally.webp",
       text: "Tally is an accounting software used for financial management and bookkeeping",
       tag: "Trending"
     },
     {
       id: 12,
       title: "Digital Marketing",
-      img: "/assets/Images/Internship images/digital-marketing.jpg",
+      img: "/assets/Images/Internship images/digital-marketing.webp",
       text: "Digital marketing uses online platforms to promote products and engage audiences.",
       tag: "Trending"
     }]
+
+  const [visibleCount, setVisibleCount] = useState(4);
   const [Courses, setCourses] = useState([]);
+  const loadMoreRef = useRef(null)
   useEffect(() => {
     setCourses(courseinfo)
   }, [])
+  useEffect(() => {
+    if (!loadMoreRef.current) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisibleCount(prev =>
+            Math.min(prev + Courses.length, Courses.length)
+          );
+        }
+      },
+      {
+        root: null,
+        rootMargin: "200px",
+        threshold: 0,
+      }
+    );
+    observer.observe(loadMoreRef.current);
+    return () => observer.disconnect();
+  }, [Courses.length]);
+
   const Form = useRef(null);
   const toForm = () => {
     Form.current?.scrollIntoView({ behavior: 'smooth' });
   }
-
 
   return (
     <div className='internship-container'>
@@ -139,7 +162,7 @@ const Internship = () => {
           <p id='ipara'>Experience practical expertise, workplace familiarity and greater knowledge of industry.</p>
         </div>
         <div id='iimg'>
-          <img src="https://metaloopglobal.com/assets/images/about-image.png" height={350} alt='wrong'></img>
+          <img src="/assets/Images/Internship images/about-image.png" height={350} alt='wrong'></img>
         </div>
       </div>
       <div className="intern-banner">
@@ -156,9 +179,9 @@ const Internship = () => {
         <div className='intern_bg_icon'>
           <img src={bgicon2} alt="icon" />
         </div>
-        <div className="trending" >
+        {/* <div className="trending" >
           {
-            Courses.map((course, i) => {
+            Courses.slice(0, visibleCount).map((course, i) => {
               const showtag = [0, 1, 2, 3]
               const show = showtag.includes(i)
               return (
@@ -167,7 +190,15 @@ const Internship = () => {
                     {show ? "Trending" : "Recommended"}
                   </span>
                   <div className="card-logo">
-                    <img src={course.img} alt="Logo"></img>
+                    <img
+                      src={course.img}
+                      alt={course.title}
+                      width="320"
+                      height="200"
+                      loading="lazy"
+                      decoding="async"
+                      onLoad={(e) => e.target.classList.add("loaded")}
+                    />
                   </div>
                   <div className="card-body">
                     <h2 className="card-title">{course.title}</h2>
@@ -178,7 +209,57 @@ const Internship = () => {
               )
             })
           }
+          {visibleCount < Courses.length && (
+            <div className="load-more-wrapper">
+              <button
+                className="load-more-btn"
+                onClick={() => setVisibleCount(prev => prev + 6)}
+              >
+                Load More Courses
+              </button>
+            </div>
+          )}
+        </div> */}
+        <div className="trending">
+          {Courses.slice(0, visibleCount).map((course, i) => {
+            const showtag = [0, 1, 2, 3];
+            const show = showtag.includes(i);
+
+            return (
+              <div className="card1" key={course.id}>
+                <span className="tagname">
+                  {show ? "Trending" : "Recommended"}
+                </span>
+
+                <div className="card-logo">
+                  <img
+                    src={course.img}
+                    alt={course.title}
+                    width="320"
+                    height="200"
+                    loading="lazy"
+                    decoding="async"
+                    onLoad={(e) => e.target.classList.add("loaded")}
+                  />
+                </div>
+
+                <div className="card-body">
+                  <h2 className="card-title">{course.title}</h2>
+                  <p className="card-text">{course.text}</p>
+                  <button className="card-button" onClick={toForm}>
+                    Explore
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
+
+        {/* Scroll trigger */}
+        {visibleCount < Courses.length && (
+          <div ref={loadMoreRef} style={{ height: "1px" }} />
+        )}
+
       </div>
 
       {/* <div className="intern-banner">
@@ -193,7 +274,7 @@ const Internship = () => {
 
       {/* Internship Form  */}
 
-      <div className="neumorph box" ref={Form}>
+      <div className="neomorph box" ref={Form}>
         <div className="neoParent">
           <div className="neoForm">
             <div className="neoMain">
@@ -206,7 +287,7 @@ const Internship = () => {
                 <h1>Let's Connect with Us !!</h1>
               </div>
               <div className="neoContent">
-                <form autoComplete="off" method="get">
+                <form autoComplete="on" >
                   <div className="neoformdata">
                     <span id="neoinput"><input type="text" name="name" id="neoname" placeholder="Name" /></span>
                   </div>
@@ -269,7 +350,10 @@ const Internship = () => {
           </div>
         </div>
       </div>
-      <Testimonials bgicon3={bgicon3} bgicon={bgicon} />
+      <Suspense fallback={null}>
+        <Testimonials bgicon3={bgicon3} bgicon={bgicon} />
+      </Suspense>
+
     </div >
   )
 }

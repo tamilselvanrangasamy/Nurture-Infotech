@@ -168,8 +168,8 @@ const Internship = () => {
       <div className="intern-banner">
         <h1> Explore our <span className='swoosh-wrap'> IT courses,
           <svg className="swoosh" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M10 40 C50 25, 250 25, 290 40" stroke="#93ed25ff" strokeWidth="6" fill="none" stroke-linecap="round" />
-            <path d="M10 48 C50 33, 250 26, 290 48" stroke="#93ed25ff" strokeWidth="4" fill="none" stroke-linecap="round" />
+            <path d="M10 40 C50 25, 250 25, 290 40" stroke="#93ed25ff" strokeWidth="6" fill="none" strokeLinecap="round" />
+            <path d="M10 48 C50 33, 250 26, 290 48" stroke="#93ed25ff" strokeWidth="4" fill="none" strokeLinecap="round" />
           </svg>
 
         </span> designed to equip you with the latest tech skills...</h1>
@@ -265,8 +265,8 @@ const Internship = () => {
       {/* <div className="intern-banner">
           <h1>Join our <span className='swoosh-wrap'>internship program
             <svg className="swoosh" viewBox="0 0 300 60" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M10 40 C50 25, 250 25, 290 40" stroke="#f3c042" strokeWidth="6" fill="none" stroke-linecap="round" />
-              <path d="M10 48 C50 33, 250 26, 290 48" stroke="#f3c042" strokeWidth="4" fill="none" stroke-linecap="round" />
+              <path d="M10 40 C50 25, 250 25, 290 40" stroke="#f3c042" strokeWidth="6" fill="none" strokeLinecap="round" />
+              <path d="M10 48 C50 33, 250 26, 290 48" stroke="#f3c042" strokeWidth="4" fill="none" strokeLinecap="round" />
             </svg>
           </span> and kickstart your career in technology!</h1>
         </div> */}

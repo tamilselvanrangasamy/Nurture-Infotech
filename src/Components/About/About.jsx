@@ -40,7 +40,13 @@ const About = () => {
               programming languages such as Java and Python, web development,
               digital marketing,
             </p> */}
-            <h1 id="ihead">Elevate Your  <span id="intern-text">Career </span> Through Nurture Infotech <span id="intern-text"></span></h1>
+
+            <h1 id="ihead"> Elevate Your <span className='swoosh-wrap'> Career
+              <svg className="swoosh" viewBox="-10 15 300 50" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M10 40 C50 25, 250 25, 290 40" stroke="#93ed25ff" strokeWidth="6" fill="none" strokeLinecap="round" />
+                <path d="M10 48 C50 33, 250 26, 290 48" stroke="#93ed25ff" strokeWidth="4" fill="none" strokeLinecap="round" />
+              </svg>
+            </span> Through Nurture Infotech</h1>
           </div>
           <p style={{ padding: "50px 10px" }}>Elevate your life with Nurture Infotech! Our comprehensive programs in Python, Digital Marketing, and programming offer transformative learning experiences. Master essential skills, unlock career opportunities, and enrich your future. Join us on a journey of growth and success through the world of IT and digital excellence.</p>
         </section>
@@ -348,8 +354,8 @@ const About = () => {
         </div>
         <div className="comp2">
           <div className="cmplogos">
-            {Companylogos.map((e) => {
-              return <img src={e.src} alt="logo"></img>;
+            {Companylogos.map((e, i) => {
+              return <img src={e.src} alt="logo" key={i}></img>;
             })}
           </div>
         </div>

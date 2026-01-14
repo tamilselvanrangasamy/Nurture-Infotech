@@ -96,7 +96,14 @@ const About = () => {
       </section>
 
       <section className="Joinnurture about_nurture">
-        <h2>What makes Nurture different</h2>
+        <div>
+          <h2>What makes Nurture different</h2>
+          <div className="underline">
+            <span className="line1"></span>
+            <span className="line2"></span>
+            <span className="line3"></span>
+          </div>
+        </div>
         <section className="whyus">
           <div className="whybox1">
             <h3>EXPERT TRAINERS</h3>
@@ -349,16 +356,21 @@ const About = () => {
       </section>
       <section className="studentWorked">
         <h2>Our Students work at</h2>
+        <div className="underline">
+          <span className="line1"></span>
+          <span className="line2"></span>
+          <span className="line3"></span>
+        </div>
         <div className="comp1">
           <Company></Company>
         </div>
-        <div className="comp2">
+        {/* <div className="comp2">
           <div className="cmplogos">
             {Companylogos.map((e, i) => {
               return <img src={e.src} alt="logo" key={i}></img>;
             })}
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );
